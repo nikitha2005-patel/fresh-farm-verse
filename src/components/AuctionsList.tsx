@@ -2,74 +2,109 @@
 import { Product } from '@/types';
 import AuctionCard from './AuctionCard';
 
-// Filter the mock products to get only those with auctions
+// Filter products to get only those with auctions
 const getAuctionProducts = () => {
   // This would normally come from an API call
-  // Using the same mock data from ProductGrid for consistency
+  // Using the selected products from the main product list that have auctions
   const MOCK_PRODUCTS: Product[] = [
     {
-      id: "1",
-      name: "Fresh Organic Tomatoes",
-      description: "Locally grown organic tomatoes, picked at peak ripeness for maximum flavor.",
-      price: 3.99,
-      category: "Vegetables",
-      image: "https://images.unsplash.com/photo-1592924357229-940a66f3e523?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&h=500&w=500",
-      farmerId: "farmer1",
-      farmerName: "Green Valley Farm",
-      organic: true,
-      seasonal: true,
-      stock: 50,
-      unit: "lb",
-      createdAt: "2023-04-10T12:00:00Z"
-    },
-    {
       id: "4",
-      name: "Heirloom Apples",
-      description: "A mix of rare heirloom apple varieties. Perfect for baking or fresh eating.",
-      price: 4.25,
-      category: "Fruits",
-      image: "https://images.unsplash.com/photo-1570913149827-d2ac84ab3f9a?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&h=500&w=500",
+      name: "Barley",
+      description: "Healthy barley used in various Indian dishes and beverages.",
+      price: 1.80,
+      category: "Crops",
+      image: "https://images.unsplash.com/photo-1631209121750-a9f656d34153?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&h=500&w=500",
       farmerId: "farmer4",
-      farmerName: "Heritage Orchards",
-      organic: false,
-      seasonal: true,
-      stock: 35,
-      unit: "lb",
-      createdAt: "2023-04-01T09:45:00Z",
+      farmerName: "Golden Fields",
+      organic: true,
+      seasonal: false,
+      stock: 120,
+      unit: "kg",
+      createdAt: "2023-04-11T09:30:00Z",
       auction: {
         id: "auction1",
         productId: "4",
-        startPrice: 3.50,
-        currentPrice: 4.75,
-        startTime: "2023-04-01T10:00:00Z",
+        startPrice: 1.50,
+        currentPrice: 1.75,
+        startTime: "2023-04-11T10:00:00Z",
         endTime: "2025-06-08T10:00:00Z",
-        bidCount: 8,
+        bidCount: 5,
         highestBidderId: "user123"
       }
     },
     {
       id: "6",
-      name: "Fresh Kale Bunches",
-      description: "Nutritious, crisp kale. Great for salads, smoothies, or cooking.",
-      price: 2.99,
-      category: "Vegetables",
-      image: "https://images.unsplash.com/photo-1600315858428-8f442d378e4b?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&h=500&w=500",
-      farmerId: "farmer1",
-      farmerName: "Green Valley Farm",
+      name: "Tur (Arhar)",
+      description: "Nutritious tur, a key ingredient in many traditional dishes.",
+      price: 4.00,
+      category: "Crops",
+      image: "https://images.unsplash.com/photo-1615485500806-831e0263385e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&h=500&w=500",
+      farmerId: "farmer6",
+      farmerName: "Indian Legumes",
       organic: true,
       seasonal: false,
-      stock: 30,
-      unit: "bunch",
-      createdAt: "2023-04-09T11:10:00Z",
+      stock: 90,
+      unit: "kg",
+      createdAt: "2023-04-06T14:20:00Z",
       auction: {
         id: "auction2",
         productId: "6",
-        startPrice: 2.00,
-        currentPrice: 2.50,
-        startTime: "2023-04-09T12:00:00Z",
+        startPrice: 3.50,
+        currentPrice: 4.15,
+        startTime: "2023-04-06T15:00:00Z",
         endTime: "2025-05-16T12:00:00Z",
-        bidCount: 3,
+        bidCount: 7,
         highestBidderId: "user456"
+      }
+    },
+    {
+      id: "11",
+      name: "Mustard",
+      description: "High-quality mustard seeds for oil and cooking.",
+      price: 2.75,
+      category: "Crops",
+      image: "https://images.unsplash.com/photo-1552323543-4a4de13483a9?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&h=500&w=500",
+      farmerId: "farmer5",
+      farmerName: "Pulse Farms",
+      organic: false,
+      seasonal: false,
+      stock: 130,
+      unit: "kg",
+      createdAt: "2023-04-08T13:30:00Z",
+      auction: {
+        id: "auction3",
+        productId: "11",
+        startPrice: 2.50,
+        currentPrice: 2.85,
+        startTime: "2023-04-08T14:00:00Z",
+        endTime: "2025-06-15T12:00:00Z",
+        bidCount: 4,
+        highestBidderId: "user789"
+      }
+    },
+    {
+      id: "33",
+      name: "Mango",
+      description: "Juicy, delicious mangoes, a staple in Indian summers.",
+      price: 5.50,
+      category: "Fruits",
+      image: "https://images.unsplash.com/photo-1553279768-865429fa0078?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&h=500&w=500",
+      farmerId: "farmer3",
+      farmerName: "Farm Fresh",
+      organic: true,
+      seasonal: true,
+      stock: 50,
+      unit: "dozen",
+      createdAt: "2023-03-29T08:00:00Z",
+      auction: {
+        id: "auction4",
+        productId: "33",
+        startPrice: 5.00,
+        currentPrice: 5.80,
+        startTime: "2023-03-29T10:00:00Z",
+        endTime: "2025-06-20T12:00:00Z",
+        bidCount: 6,
+        highestBidderId: "user234"
       }
     }
   ];

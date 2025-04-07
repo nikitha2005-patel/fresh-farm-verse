@@ -13,6 +13,7 @@ import FarmerDashboard from "./pages/FarmerDashboard";
 import FarmerProfile from "./pages/FarmerProfile";
 import Auctions from "./pages/Auctions";
 import Farmers from "./pages/Farmers";
+import FarmerPublicProfile from "./pages/FarmerPublicProfile";
 
 const queryClient = new QueryClient();
 
@@ -30,7 +31,7 @@ const App = () => (
             <Route path="/farmer" element={<FarmerDashboard />} />
             <Route path="/farmer/profile" element={<FarmerProfile />} />
             <Route path="/farmers" element={<Farmers />} />
-            <Route path="/farmer/:farmerId" element={<FarmerProfile />} />
+            <Route path="/farmer/:farmerId" element={<FarmerPublicProfile />} />
             <Route path="/auctions" element={<Auctions />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

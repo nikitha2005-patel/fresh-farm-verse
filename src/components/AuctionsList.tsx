@@ -11,7 +11,7 @@ const getAuctionProducts = () => {
       id: "4",
       name: "Barley",
       description: "Healthy barley used in various Indian dishes and beverages.",
-      price: 1.80,
+      price: 120.00, // Updated to INR
       category: "Crops",
       image: "https://images.unsplash.com/photo-1631209121750-a9f656d34153?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&h=500&w=500",
       farmerId: "farmer4",
@@ -24,8 +24,8 @@ const getAuctionProducts = () => {
       auction: {
         id: "auction1",
         productId: "4",
-        startPrice: 1.50,
-        currentPrice: 1.75,
+        startPrice: 100.00, // Updated to INR
+        currentPrice: 115.00, // Updated to INR
         startTime: "2023-04-11T10:00:00Z",
         endTime: "2025-06-08T10:00:00Z",
         bidCount: 5,
@@ -36,7 +36,7 @@ const getAuctionProducts = () => {
       id: "6",
       name: "Tur (Arhar)",
       description: "Nutritious tur, a key ingredient in many traditional dishes.",
-      price: 4.00,
+      price: 300.00, // Updated to INR
       category: "Crops",
       image: "https://images.unsplash.com/photo-1615485500806-831e0263385e?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&h=500&w=500",
       farmerId: "farmer6",
@@ -49,8 +49,8 @@ const getAuctionProducts = () => {
       auction: {
         id: "auction2",
         productId: "6",
-        startPrice: 3.50,
-        currentPrice: 4.15,
+        startPrice: 250.00, // Updated to INR
+        currentPrice: 290.00, // Updated to INR
         startTime: "2023-04-06T15:00:00Z",
         endTime: "2025-05-16T12:00:00Z",
         bidCount: 7,
@@ -61,7 +61,7 @@ const getAuctionProducts = () => {
       id: "11",
       name: "Mustard",
       description: "High-quality mustard seeds for oil and cooking.",
-      price: 2.75,
+      price: 180.00, // Updated to INR
       category: "Crops",
       image: "https://images.unsplash.com/photo-1552323543-4a4de13483a9?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&h=500&w=500",
       farmerId: "farmer5",
@@ -74,8 +74,8 @@ const getAuctionProducts = () => {
       auction: {
         id: "auction3",
         productId: "11",
-        startPrice: 2.50,
-        currentPrice: 2.85,
+        startPrice: 160.00, // Updated to INR
+        currentPrice: 175.00, // Updated to INR
         startTime: "2023-04-08T14:00:00Z",
         endTime: "2025-06-15T12:00:00Z",
         bidCount: 4,
@@ -86,7 +86,7 @@ const getAuctionProducts = () => {
       id: "33",
       name: "Mango",
       description: "Juicy, delicious mangoes, a staple in Indian summers.",
-      price: 5.50,
+      price: 450.00, // Updated to INR
       category: "Fruits",
       image: "https://images.unsplash.com/photo-1553279768-865429fa0078?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&h=500&w=500",
       farmerId: "farmer3",
@@ -99,8 +99,8 @@ const getAuctionProducts = () => {
       auction: {
         id: "auction4",
         productId: "33",
-        startPrice: 5.00,
-        currentPrice: 5.80,
+        startPrice: 400.00, // Updated to INR
+        currentPrice: 430.00, // Updated to INR
         startTime: "2023-03-29T10:00:00Z",
         endTime: "2025-06-20T12:00:00Z",
         bidCount: 6,

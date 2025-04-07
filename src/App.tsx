@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import ProductDetail from "./pages/ProductDetail";
 import Marketplace from "./pages/Marketplace";
 import FarmerDashboard from "./pages/FarmerDashboard";
+import FarmerProfile from "./pages/FarmerProfile";
 import Auctions from "./pages/Auctions";
 import Farmers from "./pages/Farmers";
 
@@ -27,7 +28,9 @@ const App = () => (
             <Route path="/marketplace" element={<Marketplace />} />
             <Route path="/product/:productId" element={<ProductDetail />} />
             <Route path="/farmer" element={<FarmerDashboard />} />
+            <Route path="/farmer/profile" element={<FarmerProfile />} />
             <Route path="/farmers" element={<Farmers />} />
+            <Route path="/farmer/:farmerId" element={<FarmerProfile />} />
             <Route path="/auctions" element={<Auctions />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

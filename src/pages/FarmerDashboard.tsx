@@ -15,7 +15,8 @@ import {
   Calendar,
   TrendingUp,
   Box,
-  Tag
+  Tag,
+  User
 } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
 import { toast } from 'sonner';
@@ -24,6 +25,7 @@ import ListingsManager from '@/components/farmer/ListingsManager';
 import CreateListingForm from '@/components/farmer/CreateListingForm';
 import FarmerAuctions from '@/components/farmer/FarmerAuctions';
 import FarmerAnalytics from '@/components/farmer/FarmerAnalytics';
+import BasePriceSettings from '@/components/farmer/BasePriceSettings';
 
 const FarmerDashboard = () => {
   const { user } = useAuth();
@@ -95,6 +97,13 @@ const FarmerDashboard = () => {
             <Button 
               variant="outline" 
               className="border-farm-green text-farm-green hover:bg-farm-green/5"
+              onClick={() => navigate('/farmer/profile')}
+            >
+              <User className="mr-2 h-4 w-4" /> My Profile
+            </Button>
+            <Button 
+              variant="outline" 
+              className="border-farm-green text-farm-green hover:bg-farm-green/5"
               onClick={() => setActiveTab("create")}
             >
               <PlusCircle className="mr-2 h-4 w-4" /> New Listing
@@ -110,7 +119,7 @@ const FarmerDashboard = () => {
         </div>
         
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="bg-background border">
+          <TabsList className="bg-background border overflow-x-auto">
             <TabsTrigger value="overview" className="data-[state=active]:bg-background">
               <BarChart3 className="h-4 w-4 mr-2" /> Overview
             </TabsTrigger>
@@ -122,6 +131,9 @@ const FarmerDashboard = () => {
             </TabsTrigger>
             <TabsTrigger value="auctions" className="data-[state=active]:bg-background">
               <HandCoins className="h-4 w-4 mr-2" /> Auctions
+            </TabsTrigger>
+            <TabsTrigger value="base-prices" className="data-[state=active]:bg-background">
+              <Tag className="h-4 w-4 mr-2" /> Base Prices
             </TabsTrigger>
             <TabsTrigger value="analytics" className="data-[state=active]:bg-background">
               <GalleryHorizontalEnd className="h-4 w-4 mr-2" /> Analytics
@@ -145,6 +157,10 @@ const FarmerDashboard = () => {
           
           <TabsContent value="auctions" className="space-y-6">
             <FarmerAuctions />
+          </TabsContent>
+
+          <TabsContent value="base-prices" className="space-y-6">
+            <BasePriceSettings />
           </TabsContent>
           
           <TabsContent value="analytics" className="space-y-6">

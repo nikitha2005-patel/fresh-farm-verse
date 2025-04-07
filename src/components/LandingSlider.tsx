@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -10,22 +11,23 @@ interface LandingSliderProps {
 
 const sliderImages = [
   {
-    src: 'src/components/dp1.jpg',
-  
+    src: '/crops_slider1.jpg',
+    alt: 'Indian farmer harvesting crops'
   },
   {
-    src: 'src/components/dp2.jpg',
-    
+    src: '/crops_slider2.jpg',
+    alt: 'Organic vegetables from Indian farms'
   },
   {
-    src: 'src/components/dp3.jpg',
-  
+    src: '/crops_slider3.jpg',
+    alt: 'Agricultural fields in rural India'
   },
   {
-    src: 'src/components/dp4.jpg',
-    
+    src: '/crops_slider4.jpg',
+    alt: 'Fresh produce at an Indian farm market'
   }
 ];
+
 const LandingSlider: React.FC<LandingSliderProps> = ({ className = '' }) => {
   return (
     <div className={`w-full h-[60vh] overflow-hidden ${className}`}>
@@ -45,7 +47,7 @@ const LandingSlider: React.FC<LandingSliderProps> = ({ className = '' }) => {
             <div className="w-full h-full flex justify-center items-center">
               <img 
                 src={image.src} 
-                
+                alt={image.alt}
                 className="w-full h-full object-cover"
               />
             </div>

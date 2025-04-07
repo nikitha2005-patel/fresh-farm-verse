@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -335,7 +334,7 @@ const Auctions = () => {
                     </div>
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">All Categories</SelectItem>
+                    <SelectItem value="all">All Categories</SelectItem>
                     {categories.map((category) => (
                       <SelectItem key={category} value={category}>
                         {category}
@@ -385,8 +384,7 @@ const Auctions = () => {
                 <AuctionCard 
                   key={`auction-${product.auction?.id}`} 
                   auction={product.auction!} 
-                  product={product} 
-                  onViewHistory={() => handleViewBidHistory(product)}
+                  product={product}
                 />
               ))}
             </div>

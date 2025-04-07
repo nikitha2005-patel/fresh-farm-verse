@@ -26,7 +26,7 @@ import {
 } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HandCoins, ImagePlus, Info, Leaf, Upload } from "lucide-react";
+import { HandCoins, ImagePlus, Info, Leaf, Upload, X } from "lucide-react";
 import { toast } from "sonner";
 
 // Define form schema with Zod

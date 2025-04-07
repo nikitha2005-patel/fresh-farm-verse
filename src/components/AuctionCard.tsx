@@ -11,9 +11,10 @@ import { toast } from 'sonner';
 interface AuctionCardProps {
   auction: Auction;
   product: Product;
+  onViewHistory?: () => void;
 }
 
-const AuctionCard = ({ auction, product }: AuctionCardProps) => {
+const AuctionCard = ({ auction, product, onViewHistory }: AuctionCardProps) => {
   const [timeLeft, setTimeLeft] = useState<string>("");
   const [bidAmount, setBidAmount] = useState<number>(auction.currentPrice + 0.25);
 
@@ -137,11 +138,23 @@ const AuctionCard = ({ auction, product }: AuctionCardProps) => {
           </Button>
         </div>
         
-        <Link to={`/product/${product.id}`} className="w-full">
-          <Button variant="outline" className="w-full border-farm-green text-farm-green hover:bg-farm-green/5">
-            View Details
-          </Button>
-        </Link>
+        <div className="flex w-full gap-2">
+          {onViewHistory && (
+            <Button
+              variant="outline"
+              className="flex-1 border-farm-accent-orange text-farm-accent-orange hover:bg-farm-accent-orange/5"
+              onClick={onViewHistory}
+            >
+              Bid History
+            </Button>
+          )}
+          
+          <Link to={`/product/${product.id}`} className={onViewHistory ? "flex-1" : "w-full"}>
+            <Button variant="outline" className="w-full border-farm-green text-farm-green hover:bg-farm-green/5">
+              View Details
+            </Button>
+          </Link>
+        </div>
       </CardFooter>
     </Card>
   );

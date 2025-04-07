@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import FarmScene from '@/components/FarmScene';
 import ProductGrid from '@/components/ProductGrid';
 import UserAuth from '@/components/UserAuth';
+import LandingSlider from '@/components/LandingSlider';
 
 const Index = () => {
   const [showAuth, setShowAuth] = useState(false);
@@ -23,7 +24,7 @@ const Index = () => {
       <section className="relative">
         {/* 3D Scene */}
         <div className="h-[60vh] md:h-[70vh] relative overflow-hidden">
-          <FarmScene className="h-full w-full" />
+          <LandingSlider className="h-full w-full" />
           
           {/* Overlay Content */}
           <div className="absolute inset-0 flex items-center">

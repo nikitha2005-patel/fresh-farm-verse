@@ -42,7 +42,7 @@ const MOCK_PRODUCTS: Product[] = [
     description: "Golden maize known for its rich taste and high yield.",
     price: 2.20,
     category: "Crops",
-    image: "https://images.unsplash.com/photo-1551549899-c6e902083ffe?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&h=500&w=500",
+    image: "https://loremflickr.com/500/500/maize",
     farmerId: "farmer3",
     farmerName: "Farm Fresh",
     organic: false,

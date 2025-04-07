@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -166,13 +165,15 @@ const ListingsManager = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           <CardTitle>My Listings</CardTitle>
           <div className="flex items-center space-x-2 mt-2 md:mt-0">
-            <Input
-              placeholder="Search listings..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full md:w-64"
-              icon={<Search className="h-4 w-4 text-muted-foreground" />}
-            />
+            <div className="relative w-full md:w-64">
+              <Search className="h-4 w-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
+              <Input
+                placeholder="Search listings..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-9"
+              />
+            </div>
             
             <DropdownMenu>
               <DropdownMenuTrigger asChild>

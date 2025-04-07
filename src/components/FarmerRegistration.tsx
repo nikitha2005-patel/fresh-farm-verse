@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
@@ -28,7 +27,7 @@ import {
   Lock,
   Phone,
   MapPin,
-  Farm,
+  Warehouse,
   Ruler,
   Plus,
   X,
@@ -316,7 +315,7 @@ const FarmerRegistration = () => {
                 <div className="space-y-2">
                   <Label htmlFor="farmName">Farm Name</Label>
                   <div className="relative">
-                    <Farm className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                    <Warehouse className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                     <Input
                       id="farmName"
                       placeholder="Your Farm Name"

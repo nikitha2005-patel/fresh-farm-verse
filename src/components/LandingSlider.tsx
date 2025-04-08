@@ -11,19 +11,19 @@ interface LandingSliderProps {
 
 const sliderImages = [
   {
-    src: '/crops_slider1.jpg',
+    src: 'src/components/dp1.jpg',
     alt: 'Indian farmer harvesting crops'
   },
   {
-    src: '/crops_slider2.jpg',
+    src: 'src/components/dp2.jpg',
     alt: 'Organic vegetables from Indian farms'
   },
   {
-    src: '/crops_slider3.jpg',
+    src: 'src/components/dp3.jpg',
     alt: 'Agricultural fields in rural India'
   },
   {
-    src: '/crops_slider4.jpg',
+    src: 'src/components/dp4.jpg',
     alt: 'Fresh produce at an Indian farm market'
   }
 ];
